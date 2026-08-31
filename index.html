@@ -1,0 +1,1991 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Fadhila Rizki | Portfolio</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+
+    <style>
+
+        /* =========================
+           BASIC
+        ========================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: #f4f0e9;
+            color: #292725;
+            font-family: "DM Sans", sans-serif;
+            line-height: 1.7;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        img {
+            width: 100%;
+            display: block;
+        }
+
+
+        /* =========================
+           NAVBAR
+        ========================= */
+
+        nav {
+            height: 78px;
+            padding: 0 7%;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            border-bottom: 1px solid #d8d1c8;
+
+            position: sticky;
+            top: 0;
+
+            background: rgba(244,240,233,0.95);
+            backdrop-filter: blur(10px);
+
+            z-index: 100;
+        }
+
+        .logo {
+            font-family: "Playfair Display", serif;
+            font-size: 26px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            font-size: 12px;
+            color: #77716b;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #292725;
+        }
+
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero {
+            min-height: 690px;
+
+            padding: 90px 9%;
+
+            display: grid;
+            grid-template-columns: 1.15fr 0.85fr;
+
+            gap: 90px;
+
+            align-items: center;
+        }
+
+        .eyebrow {
+            font-size: 10px;
+            letter-spacing: 3px;
+            color: #8b7562;
+        }
+
+        .hero h1 {
+            font-family: "Playfair Display", serif;
+
+            font-size: clamp(70px, 9vw, 120px);
+
+            line-height: 0.88;
+
+            font-weight: 500;
+
+            margin-top: 25px;
+        }
+
+        .hero h1 i {
+            color: #8b7562;
+        }
+
+        .hero-description {
+            max-width: 560px;
+
+            margin-top: 35px;
+
+            color: #77716b;
+
+            font-size: 17px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 12px;
+
+            margin-top: 35px;
+        }
+
+        .button {
+            padding: 12px 20px;
+
+            border: 1px solid #292725;
+
+            font-size: 12px;
+
+            transition: 0.3s;
+        }
+
+        .button.dark {
+            background: #292725;
+            color: white;
+        }
+
+        .button.light:hover {
+            background: #292725;
+            color: white;
+        }
+
+
+        /* =========================
+           PROFILE PHOTO
+        ========================= */
+
+        .hero-photo {
+            position: relative;
+        }
+
+        .photo-box {
+            width: 100%;
+            max-width: 420px;
+
+            aspect-ratio: 4 / 5;
+
+            background: #ddd5ca;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            overflow: hidden;
+        }
+
+        .photo-box img {
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+        }
+
+        .photo-placeholder {
+            text-align: center;
+
+            color: #8b7562;
+
+            padding: 30px;
+        }
+
+        .photo-placeholder strong {
+            display: block;
+
+            font-family: "Playfair Display", serif;
+
+            font-size: 35px;
+
+            margin-bottom: 10px;
+        }
+
+        .photo-placeholder span {
+            font-size: 11px;
+        }
+
+        .floating-card {
+            position: absolute;
+
+            left: -35px;
+            bottom: -25px;
+
+            background: #faf8f4;
+
+            border: 1px solid #d8d1c8;
+
+            padding: 18px 22px;
+
+            font-size: 12px;
+        }
+
+        .floating-card span {
+            display: block;
+
+            color: #8b7562;
+
+            font-size: 10px;
+
+            letter-spacing: 1px;
+
+            margin-bottom: 5px;
+        }
+
+
+        /* =========================
+           GENERAL SECTION
+        ========================= */
+
+        section {
+            padding: 110px 9%;
+        }
+
+        .cream {
+            background: #faf8f4;
+        }
+
+        .section-title {
+            display: flex;
+
+            gap: 20px;
+
+            align-items: flex-start;
+
+            margin-bottom: 60px;
+        }
+
+        .section-number {
+            color: #8b7562;
+
+            font-size: 11px;
+
+            letter-spacing: 2px;
+        }
+
+        .section-title h2 {
+            font-family: "Playfair Display", serif;
+
+            font-size: clamp(43px, 5vw, 65px);
+
+            line-height: 1;
+
+            font-weight: 500;
+        }
+
+        .section-title h2 i {
+            color: #8b7562;
+        }
+
+
+        /* =========================
+           ABOUT
+        ========================= */
+
+        .about-grid {
+            display: grid;
+
+            grid-template-columns: 1.3fr 0.7fr;
+
+            gap: 100px;
+        }
+
+        .about-text {
+            max-width: 720px;
+        }
+
+        .about-text .big {
+            color: #292725;
+
+            font-size: 21px;
+
+            line-height: 1.6;
+
+            margin-bottom: 25px;
+        }
+
+        .about-text p:not(.big) {
+            color: #77716b;
+
+            margin-bottom: 20px;
+        }
+
+        .facts {
+            border-top: 1px solid #d8d1c8;
+        }
+
+        .fact {
+            padding: 18px 0;
+
+            border-bottom: 1px solid #d8d1c8;
+
+            display: flex;
+
+            flex-direction: column;
+        }
+
+        .fact span {
+            color: #77716b;
+
+            font-size: 10px;
+
+            text-transform: uppercase;
+
+            letter-spacing: 1px;
+        }
+
+        .fact strong {
+            font-size: 14px;
+
+            font-weight: 500;
+        }
+
+
+        /* =========================
+           EDUCATION
+        ========================= */
+
+        .timeline {
+            border-top: 1px solid #d8d1c8;
+        }
+
+        .education {
+            display: grid;
+
+            grid-template-columns: 180px 1fr;
+
+            gap: 50px;
+
+            padding: 35px 0;
+
+            border-bottom: 1px solid #d8d1c8;
+        }
+
+        .education-date {
+            color: #8b7562;
+
+            font-size: 12px;
+        }
+
+        .education h3 {
+            font-size: 22px;
+
+            font-weight: 500;
+        }
+
+        .education-role {
+            color: #8b7562;
+
+            font-size: 13px;
+
+            margin: 5px 0 12px;
+        }
+
+        .education p:last-child {
+            color: #77716b;
+
+            max-width: 720px;
+        }
+
+
+        /* =========================
+           EXPERIENCE
+        ========================= */
+
+        .experience-grid {
+            display: grid;
+
+            grid-template-columns: repeat(2, 1fr);
+
+            gap: 20px;
+        }
+
+        .experience-card {
+            background: #faf8f4;
+
+            border: 1px solid #d8d1c8;
+
+            padding: 32px;
+        }
+
+        .experience-number {
+            display: flex;
+
+            justify-content: space-between;
+
+            color: #8b7562;
+
+            font-size: 11px;
+
+            letter-spacing: 1px;
+
+            margin-bottom: 30px;
+        }
+
+        .experience-card h3 {
+            font-family: "Playfair Display", serif;
+
+            font-size: 31px;
+
+            font-weight: 500;
+        }
+
+        .position {
+            color: #8b7562;
+
+            font-size: 13px;
+
+            margin: 4px 0 20px;
+        }
+
+        .experience-card p:not(.position) {
+            color: #77716b;
+
+            font-size: 14px;
+
+            margin-bottom: 15px;
+        }
+
+        .achievement-note {
+            border-top: 1px solid #d8d1c8;
+
+            padding-top: 17px;
+
+            color: #8b7562;
+
+            font-size: 11px;
+        }
+
+
+        /* =========================
+           PROJECTS
+        ========================= */
+
+        .project-intro {
+            max-width: 620px;
+
+            color: #77716b;
+
+            margin-top: -30px;
+
+            margin-bottom: 55px;
+        }
+
+        .projects {
+            display: grid;
+
+            grid-template-columns: repeat(2, 1fr);
+
+            gap: 30px;
+        }
+
+        .project {
+            border: 1px solid #d8d1c8;
+
+            background: #f4f0e9;
+        }
+
+        .project-image {
+            height: 300px;
+
+            background: #ded7cd;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            overflow: hidden;
+        }
+
+        .project-image img {
+            height: 100%;
+
+            object-fit: cover;
+        }
+
+        .project-placeholder {
+            text-align: center;
+
+            color: #8b7562;
+        }
+
+        .project-placeholder strong {
+            display: block;
+
+            font-family: "Playfair Display", serif;
+
+            font-size: 30px;
+
+            margin-bottom: 5px;
+        }
+
+        .project-placeholder span {
+            font-size: 10px;
+
+            letter-spacing: 1px;
+        }
+
+        .project-content {
+            padding: 28px;
+        }
+
+        .project-type {
+            color: #8b7562;
+
+            font-size: 9px;
+
+            letter-spacing: 2px;
+        }
+
+        .project-content h3 {
+            font-family: "Playfair Display", serif;
+
+            font-size: 32px;
+
+            font-weight: 500;
+
+            margin: 8px 0 15px;
+        }
+
+        .project-content p {
+            color: #77716b;
+
+            font-size: 14px;
+
+            margin-bottom: 12px;
+        }
+
+        .tags {
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 7px;
+
+            margin-top: 20px;
+        }
+
+        .tags span {
+            border: 1px solid #d8d1c8;
+
+            padding: 5px 9px;
+
+            color: #77716b;
+
+            font-size: 9px;
+        }
+
+
+        /* =========================
+           ACHIEVEMENTS
+        ========================= */
+
+        .achievement-list {
+            border-top: 1px solid #d8d1c8;
+        }
+
+        .achievement {
+            display: grid;
+
+            grid-template-columns: 60px 1fr 80px;
+
+            gap: 30px;
+
+            padding: 28px 0;
+
+            border-bottom: 1px solid #d8d1c8;
+        }
+
+        .achievement > span {
+            color: #8b7562;
+
+            font-size: 11px;
+        }
+
+        .achievement h3 {
+            font-family: "Playfair Display", serif;
+
+            font-size: 27px;
+
+            font-weight: 500;
+        }
+
+        .achievement p {
+            color: #77716b;
+
+            font-size: 14px;
+
+            max-width: 720px;
+        }
+
+        .achievement small {
+            color: #77716b;
+
+            font-size: 11px;
+
+            text-align: right;
+        }
+
+
+        /* =========================
+           EEPISAT MESSAGE
+        ========================= */
+
+        .eepisat {
+            background: #292725;
+
+            color: white;
+
+            padding: 130px 9%;
+        }
+
+        .eepisat-content {
+            max-width: 900px;
+        }
+
+        .eepisat .eyebrow {
+            color: #aaa;
+        }
+
+        .eepisat h2 {
+            font-family: "Playfair Display", serif;
+
+            font-size: clamp(50px, 7vw, 90px);
+
+            line-height: 1;
+
+            font-weight: 500;
+
+            margin: 30px 0 40px;
+        }
+
+        .eepisat h2 i {
+            color: #c8b7a7;
+        }
+
+        .eepisat p:not(.eyebrow) {
+            color: #c5c0ba;
+
+            max-width: 720px;
+
+            margin-bottom: 20px;
+        }
+
+
+        /* =========================
+           CONTACT
+        ========================= */
+
+        .contact {
+            text-align: center;
+        }
+
+        .contact .section-title {
+            justify-content: center;
+        }
+
+        .contact-description {
+            color: #77716b;
+        }
+
+        .contact-links {
+            margin-top: 35px;
+
+            display: flex;
+
+            justify-content: center;
+
+            gap: 35px;
+
+            flex-wrap: wrap;
+        }
+
+        .contact-links a {
+            border-bottom: 1px solid #292725;
+
+            padding-bottom: 4px;
+
+            font-size: 13px;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            border-top: 1px solid #d8d1c8;
+
+            padding: 25px 7%;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            color: #77716b;
+
+            font-size: 10px;
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 800px) {
+
+            .nav-links {
+                display: none;
+            }
+
+            .hero {
+                grid-template-columns: 1fr;
+
+                padding: 70px 7%;
+
+                gap: 60px;
+            }
+
+            .hero h1 {
+                font-size: 70px;
+            }
+
+            .hero-photo {
+                max-width: 380px;
+
+                margin: auto;
+            }
+
+            section {
+                padding: 80px 7%;
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+
+                gap: 50px;
+            }
+
+            .education {
+                grid-template-columns: 1fr;
+
+                gap: 8px;
+            }
+
+            .experience-grid,
+            .projects {
+                grid-template-columns: 1fr;
+            }
+
+            .achievement {
+                grid-template-columns: 35px 1fr;
+            }
+
+            .achievement small {
+                grid-column: 2;
+
+                text-align: left;
+            }
+
+            .contact-links {
+                flex-direction: column;
+
+                align-items: center;
+            }
+
+            footer {
+                flex-direction: column;
+
+                gap: 8px;
+            }
+
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     NAVIGATION
+========================= -->
+
+<nav>
+
+    <a href="#" class="logo">FR.</a>
+
+    <div class="nav-links">
+
+        <a href="#about">About</a>
+
+        <a href="#education">Education</a>
+
+        <a href="#experience">Experience</a>
+
+        <a href="#projects">Projects</a>
+
+        <a href="#achievements">Achievements</a>
+
+        <a href="#contact">Contact</a>
+
+    </div>
+
+</nav>
+
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<header class="hero">
+
+    <div>
+
+        <p class="eyebrow">
+            MULTIMEDIA ENGINEERING TECHNOLOGY · PENS
+        </p>
+
+        <h1>
+            Fadhila<br>
+            <i>Rizki.</i>
+        </h1>
+
+        <p class="hero-description">
+            A Multimedia Engineering Technology student who enjoys
+            working with people, organizing ideas, and turning
+            collaborative experiences into meaningful projects.
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="#experience" class="button dark">
+                My Experience
+            </a>
+
+            <a href="#contact" class="button light">
+                Let's Connect
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="hero-photo">
+
+        <div class="photo-box">
+
+            <!--
+            GANTI BAGIAN INI DENGAN FOTO KAMU
+
+            Contoh:
+            <img src="profile.jpg" alt="Fadhila Rizki">
+            -->
+
+            <div class="photo-placeholder">
+
+                <strong>Fadhila.</strong>
+
+                <span>
+                    PLACE YOUR PHOTO HERE
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <div class="floating-card">
+
+            <span>WHAT I VALUE</span>
+
+            Communication · Teamwork · Responsibility
+
+        </div>
+
+    </div>
+
+</header>
+
+
+
+<!-- =========================
+     ABOUT
+========================= -->
+
+<section id="about">
+
+    <div class="section-title">
+
+        <span class="section-number">01</span>
+
+        <h2>
+            More than<br>
+            <i>a student.</i>
+        </h2>
+
+    </div>
+
+
+    <div class="about-grid">
+
+        <div class="about-text">
+
+            <p class="big">
+
+                I am a first-year Multimedia Engineering Technology
+                student at Politeknik Elektronika Negeri Surabaya
+                with a strong interest in communication, teamwork,
+                and organizational development.
+
+            </p>
+
+
+            <p>
+
+                Throughout high school, I had opportunities to work
+                with different teams, coordinate activities, manage
+                responsibilities, and participate in both creative
+                and scientific projects.
+
+            </p>
+
+
+            <p>
+
+                I enjoy building good relationships with others,
+                supporting team members, and contributing to an
+                environment where people can work and grow together.
+
+            </p>
+
+
+            <p>
+
+                My experiences have taught me that a strong team
+                is not only built by people who are capable,
+                but also by people who are willing to listen,
+                communicate, and support one another.
+
+            </p>
+
+        </div>
+
+
+        <div class="facts">
+
+            <div class="fact">
+
+                <span>Currently</span>
+
+                <strong>
+                    First-year student at PENS
+                </strong>
+
+            </div>
+
+
+            <div class="fact">
+
+                <span>Field</span>
+
+                <strong>
+                    Multimedia Engineering Technology
+                </strong>
+
+            </div>
+
+
+            <div class="fact">
+
+                <span>Interests</span>
+
+                <strong>
+                    Communication · Organization · Creative Work
+                </strong>
+
+            </div>
+
+
+            <div class="fact">
+
+                <span>Strength</span>
+
+                <strong>
+                    Teamwork & Coordination
+                </strong>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     EDUCATION
+========================= -->
+
+<section id="education" class="cream">
+
+    <div class="section-title">
+
+        <span class="section-number">02</span>
+
+        <h2>Education</h2>
+
+    </div>
+
+
+    <div class="timeline">
+
+
+        <div class="education">
+
+            <div class="education-date">
+                August 2026 — Present
+            </div>
+
+            <div>
+
+                <h3>
+                    Politeknik Elektronika Negeri Surabaya
+                </h3>
+
+                <p class="education-role">
+                    Applied Bachelor's Degree of Multimedia Engineering Technology
+                </p>
+
+                <p>
+                    Currently exploring multimedia, technology,
+                    digital communication, and creative problem solving.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="education">
+
+            <div class="education-date">
+                June 2023 — May 2026
+            </div>
+
+            <div>
+
+                <h3>
+                    SMA Negeri 2 Madiun
+                </h3>
+
+                <p class="education-role">
+                    Senior High School · Average 91.3
+                </p>
+
+                <p>
+                    Ranked 36th out of 400 students and achieved
+                    First Place in the National Science Olympiad (OSN)
+                    in Economics.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="education">
+
+            <div class="education-date">
+                June 2020 — June 2023
+            </div>
+
+            <div>
+
+                <h3>
+                    SMP Negeri 1 Madiun
+                </h3>
+
+                <p class="education-role">
+                    Junior High School · Average 92.5
+                </p>
+
+                <p>
+                    Served as Vice President of the Student Council
+                    (OSIS) during the 2022–2023 period.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     ORGANIZATION
+========================= -->
+
+<section id="experience">
+
+    <div class="section-title">
+
+        <span class="section-number">03</span>
+
+        <h2>
+            Where I learned<br>
+            <i>to work with people.</i>
+        </h2>
+
+    </div>
+
+
+    <div class="experience-grid">
+
+
+        <!-- FORUM ANAK -->
+
+        <article class="experience-card">
+
+            <div class="experience-number">
+
+                <span>01</span>
+
+                <span>ORGANIZATION</span>
+
+            </div>
+
+            <h3>
+                Forum Anak Kota Madiun
+            </h3>
+
+            <p class="position">
+                Vice Chairperson II
+            </p>
+
+            <p>
+                Assisted the Chairperson in coordinating
+                organizational programs and managing internal
+                activities to support effective program execution.
+            </p>
+
+            <p>
+                Coordinated members and supported cross-divisional
+                collaboration in planning and implementing
+                organizational initiatives.
+            </p>
+
+            <p>
+                Represented children's aspirations and contributed
+                to activities involving youth participation and empowerment.
+            </p>
+
+        </article>
+
+
+
+        <!-- TEATER AGNI -->
+
+        <article class="experience-card">
+
+            <div class="experience-number">
+
+                <span>02</span>
+
+                <span>PERFORMING ARTS</span>
+
+            </div>
+
+            <h3>
+                Teater Agni
+            </h3>
+
+            <p class="position">
+                Treasurer
+            </p>
+
+            <p>
+                Managed financial administration, budgeting,
+                and cash flow for organizational activities
+                and theatrical productions.
+            </p>
+
+            <p>
+                Coordinated financial needs for rehearsals,
+                performances, and events while maintaining
+                accurate financial records.
+            </p>
+
+            <div class="achievement-note">
+
+                1st Place — Mataraman Student Theater Festival
+                <br>
+
+                3rd Place — East Java Poetry Musicalization Festival
+
+            </div>
+
+        </article>
+
+
+
+        <!-- KIR -->
+
+        <article class="experience-card">
+
+            <div class="experience-number">
+
+                <span>03</span>
+
+                <span>SCIENCE</span>
+
+            </div>
+
+            <h3>
+                KIR Cakra
+            </h3>
+
+            <p class="position">
+                Division Staff
+            </p>
+
+            <p>
+                Planned and coordinated organizational events,
+                including event concepts, schedules, and
+                technical preparations.
+            </p>
+
+            <p>
+                Collaborated with committee members and other
+                divisions to ensure smooth execution of scientific
+                and organizational activities.
+            </p>
+
+            <p>
+                Supported programs that encouraged students'
+                interest in scientific exploration and research.
+            </p>
+
+        </article>
+
+
+
+        <!-- OSIS -->
+
+        <article class="experience-card">
+
+            <div class="experience-number">
+
+                <span>04</span>
+
+                <span>STUDENT ORGANIZATION</span>
+
+            </div>
+
+            <h3>
+                OSIS SMP Negeri 1 Madiun
+            </h3>
+
+            <p class="position">
+                Division Staff · Vice President
+            </p>
+
+            <p>
+                Planned and coordinated organizational events,
+                including concepts, schedules, and technical
+                preparations.
+            </p>
+
+            <p>
+                Collaborated with committee members and different
+                divisions to support smooth program execution.
+            </p>
+
+            <p>
+                Later served as Vice President of OSIS for
+                the 2022–2023 period.
+            </p>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     PROJECT EXPERIENCE
+========================= -->
+
+<section id="projects" class="cream">
+
+    <div class="section-title">
+
+        <span class="section-number">04</span>
+
+        <h2>
+            Selected<br>
+            <i>projects.</i>
+        </h2>
+
+    </div>
+
+
+    <p class="project-intro">
+
+        Projects that reflect how I combine creativity,
+        communication, teamwork, problem solving, and
+        an interest in creating useful solutions.
+
+    </p>
+
+
+    <div class="projects">
+
+
+        <!-- CALCIYUM -->
+
+        <article class="project">
+
+            <div class="project-image">
+
+                <!--
+                GANTI DENGAN:
+                <img src="calciyum.jpg" alt="CalciYum">
+                -->
+
+                <div class="project-placeholder">
+
+                    <strong>CalciYum</strong>
+
+                    <span>
+                        YOUR PROJECT IMAGE
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="project-content">
+
+                <p class="project-type">
+                    BRANDING · VISUAL COMMUNICATION
+                </p>
+
+                <h3>
+                    CalciYum
+                </h3>
+
+                <p>
+                    Designed a health-focused product identity
+                    using approachable mascot illustrations
+                    to make nutritional information easier to digest.
+                </p>
+
+                <p>
+                    The project demonstrates visual communication,
+                    asset management, and the ability to create
+                    a structured and informative visual system.
+                </p>
+
+                <div class="tags">
+
+                    <span>Branding</span>
+                    <span>Illustration</span>
+                    <span>Visual System</span>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- KARTINI -->
+
+        <article class="project">
+
+            <div class="project-image">
+
+                <!--
+                GANTI DENGAN:
+                <img src="kartini.jpg" alt="KARTINI">
+                -->
+
+                <div class="project-placeholder">
+
+                    <strong>KARTINI</strong>
+
+                    <span>
+                        YOUR PROJECT IMAGE
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="project-content">
+
+                <p class="project-type">
+                    UI/UX · DIGITAL SYSTEM
+                </p>
+
+                <h3>
+                    KARTINI & Si KiTA
+                </h3>
+
+                <p>
+                    Conceptualized a centralized digital public
+                    service system with an integrated AI assistant
+                    called "Si KiTA".
+                </p>
+
+                <p>
+                    The project focuses on simplifying access to
+                    multi-category services while improving the
+                    flow of information and user interaction.
+                </p>
+
+                <div class="tags">
+
+                    <span>UI/UX</span>
+                    <span>System Thinking</span>
+                    <span>AI Concept</span>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- MERAIH MIMPI -->
+
+        <article class="project">
+
+            <div class="project-image">
+
+                <!--
+                GANTI DENGAN:
+                <img src="meraih-mimpi.jpg" alt="Meraih Mimpi">
+                -->
+
+                <div class="project-placeholder">
+
+                    <strong>Meraih Mimpi</strong>
+
+                    <span>
+                        YOUR PROJECT IMAGE
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="project-content">
+
+                <p class="project-type">
+                    CREATIVE COLLABORATION · MUSIC
+                </p>
+
+                <h3>
+                    Meraih Mimpi
+                </h3>
+
+                <p>
+                    Collaborated with a team to create an original
+                    song for the anniversary celebration of
+                    SMP Negeri 1 Madiun.
+                </p>
+
+                <p>
+                    Contributed to developing the lyrics and melody
+                    while working closely with team members to
+                    shape the final performance.
+                </p>
+
+                <div class="tags">
+
+                    <span>Music</span>
+                    <span>Creative</span>
+                    <span>Teamwork</span>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- SMADA CUP -->
+
+        <article class="project">
+
+            <div class="project-image">
+
+                <div class="project-placeholder">
+
+                    <strong>SMADA Cup</strong>
+
+                    <span>
+                        YOUR PROJECT IMAGE
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="project-content">
+
+                <p class="project-type">
+                    EVENT · PERFORMANCE
+                </p>
+
+                <h3>
+                    SMADA Cup Event
+                </h3>
+
+                <p>
+                    Served as music editor, lighting operator,
+                    and performance director for Teater Agni.
+                </p>
+
+                <p>
+                    Coordinated with team members during preparation
+                    and performance, managed technical aspects,
+                    and helped ensure the performance ran smoothly.
+                </p>
+
+                <div class="tags">
+
+                    <span>Event</span>
+                    <span>Coordination</span>
+                    <span>Technical</span>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- PT KAI -->
+
+        <article class="project">
+
+            <div class="project-image">
+
+                <div class="project-placeholder">
+
+                    <strong>Youth Pledge</strong>
+
+                    <span>
+                        YOUR PROJECT IMAGE
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="project-content">
+
+                <p class="project-type">
+                    PERFORMANCE · PUBLIC EVENT
+                </p>
+
+                <h3>
+                    Talk Show Sumpah Pemuda
+                </h3>
+
+                <p>
+                    Performed as part of a team in a poetry
+                    musicalization performance at the Youth Pledge
+                    Talk Show organized by PT KAI at Madiun Railway Station.
+                </p>
+
+                <p>
+                    Worked closely with team members during
+                    preparation and performance, strengthening
+                    teamwork, adaptability, and confidence.
+                </p>
+
+                <div class="tags">
+
+                    <span>Performance</span>
+                    <span>Communication</span>
+                    <span>Teamwork</span>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- YOUTH PROGRAM -->
+
+        <article class="project">
+
+            <div class="project-image">
+
+                <div class="project-placeholder">
+
+                    <strong>Youth Programs</strong>
+
+                    <span>
+                        YOUR PROJECT IMAGE
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="project-content">
+
+                <p class="project-type">
+                    SOCIAL PARTICIPATION
+                </p>
+
+                <h3>
+                    Youth Aspiration & Government Collaboration
+                </h3>
+
+                <p>
+                    Facilitated communication between children
+                    and local government, particularly the
+                    Social Services Agency.
+                </p>
+
+                <p>
+                    Helped convey children's aspirations and
+                    concerns while supporting collaborative
+                    youth participation programs.
+                </p>
+
+                <div class="tags">
+
+                    <span>Communication</span>
+                    <span>Coordination</span>
+                    <span>Advocacy</span>
+
+                </div>
+
+            </div>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     ACHIEVEMENTS
+========================= -->
+
+<section id="achievements">
+
+    <div class="section-title">
+
+        <span class="section-number">05</span>
+
+        <h2>
+            Things I am<br>
+            <i>proud of.</i>
+        </h2>
+
+    </div>
+
+
+    <div class="achievement-list">
+
+
+        <div class="achievement">
+
+            <span>01</span>
+
+            <div>
+
+                <h3>
+                    1st Place — Mataraman Art Festival
+                </h3>
+
+                <p>
+                    First Place in the Senior High School Student
+                    Mataraman Art Festival 2023 at Bakorwil I Madiun.
+                </p>
+
+            </div>
+
+            <small>2023</small>
+
+        </div>
+
+
+        <div class="achievement">
+
+            <span>02</span>
+
+            <div>
+
+                <h3>
+                    3rd Place — Poetry Musicalization
+                </h3>
+
+                <p>
+                    Third Place in the Poetry Musicalization Festival
+                    for Senior High School Students across East Java,
+                    organized in collaboration with Balai Bahasa
+                    Provinsi Jawa Timur.
+                </p>
+
+            </div>
+
+            <small>2024</small>
+
+        </div>
+
+
+        <div class="achievement">
+
+            <span>03</span>
+
+            <div>
+
+                <h3>
+                    Gold Medalist — Biology Olympiad
+                </h3>
+
+                <p>
+                    Gold Medal in the National Biology Olympiad at
+                    SARCOMA (Scientific Research and Academic Competition),
+                    organized by Asian Medical Students Association USK.
+                </p>
+
+            </div>
+
+            <small>2026</small>
+
+        </div>
+
+
+        <div class="achievement">
+
+            <span>04</span>
+
+            <div>
+
+                <h3>
+                    Gold Medalist — Medical Olympiad
+                </h3>
+
+                <p>
+                    Gold Medal in the National Medical Olympiad
+                    for Senior High School Level.
+                </p>
+
+            </div>
+
+            <small>2026</small>
+
+        </div>
+
+
+        <div class="achievement">
+
+            <span>05</span>
+
+            <div>
+
+                <h3>
+                    3rd Place — National Videography
+                </h3>
+
+                <p>
+                    Third Place in the National Videography Competition
+                    at the 2026 Infographic and Videography Competition
+                    with the theme "Visualize Nutrition, Voice Healthy
+                    Living with Optimal Nutrition".
+                </p>
+
+            </div>
+
+            <small>2026</small>
+
+        </div>
+
+
+        <div class="achievement">
+
+            <span>06</span>
+
+            <div>
+
+                <h3>
+                    1st Place — OSN Economics
+                </h3>
+
+                <p>
+                    First Place in the National Science Olympiad (OSN)
+                    in Economics at Senior High School level.
+                </p>
+
+            </div>
+
+            <small>2026</small>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     WHY EEPISAT
+========================= -->
+
+<section class="eepisat">
+
+    <div class="eepisat-content">
+
+        <p class="eyebrow">
+            WHY EEPISAT · INTERNAL
+        </p>
+
+
+        <h2>
+            I want to be part of a team
+            where people can
+            <i>grow together.</i>
+        </h2>
+
+
+        <p>
+            My experiences in organizations have taught me that
+            being part of a team is not simply about finishing
+            your own responsibilities.
+        </p>
+
+
+        <p>
+            It is about knowing when to communicate, when to listen,
+            when to help, and how to make sure everyone can contribute.
+        </p>
+
+
+        <p>
+            Through EEPISAT Internal, I hope to contribute my
+            experience in communication, coordination, and
+            organizational work while learning from people with
+            different skills and perspectives.
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     CONTACT
+========================= -->
+
+<section id="contact" class="contact">
+
+    <div class="section-title">
+
+        <span class="section-number">06</span>
+
+        <h2>
+            Let's connect.
+        </h2>
+
+    </div>
+
+
+    <p class="contact-description">
+
+        Thank you for taking the time to get to know me.
+
+    </p>
+
+
+    <div class="contact-links">
+
+        <a href="mailto:fadhila050507@gmail.com">
+            Email
+        </a>
+
+        <a href="https://instagram.com/dhilarzk" target="_blank">
+            Instagram
+        </a>
+
+        <a href="tel:082335744839">
+            Phone
+        </a>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    <strong>
+        Fadhila Rizki.
+    </strong>
+
+    <span>
+        Multimedia Engineering Technology · PENS · 2026
+    </span>
+
+</footer>
+
+
+</body>
+</html>
+```
